@@ -40,16 +40,16 @@ public class SongPlaylist1 {
         List<Song> playlist = new ArrayList<>();
 
         // Create an initial playlist with 10 songs and different play counts
-        playlist.add(new Song("Song 1", "Arjit Singh", 5));
-        playlist.add(new Song("Song 2", "Sidhu", 8));
-        playlist.add(new Song("Song 3", "Eminem", 12));
-        playlist.add(new Song("Song 4", "Imran Khan", 3));
-        playlist.add(new Song("Song 5", "ED Sheeran", 6));
-        playlist.add(new Song("Song 6", "Diljit Dosanjh", 10));
-        playlist.add(new Song("Song 7", "Atif Aslam", 15));
-        playlist.add(new Song("Song 8", "Salman Khan", 2));
-        playlist.add(new Song("Song 9", "Sharukh Khan", 7));
-        playlist.add(new Song("Song 10", "Bob Marley", 4));
+        playlist.add(new Song("Ehnna Sohna", "Arjit Singh", 5));
+        playlist.add(new Song("295", "Sidhu", 8));
+        playlist.add(new Song("lala", "Eminem", 12));
+        playlist.add(new Song("Amplifier", "Imran Khan", 3));
+        playlist.add(new Song("Shape of you", "ED Sheeran", 6));
+        playlist.add(new Song("do you know", "Diljit Dosanjh", 10));
+        playlist.add(new Song("kadi de hans bol", "Atif Aslam", 15));
+        playlist.add(new Song("pathaan", "Salman Khan", 2));
+        playlist.add(new Song("chamak challo", "Sharukh Khan", 7));
+        playlist.add(new Song("yh", "Bob Marley", 4));
 
         Scanner scanner = new Scanner(System.in);
 
@@ -58,7 +58,8 @@ public class SongPlaylist1 {
             System.out.println("1. Add a new song to the playlist");
             System.out.println("2. Remove a song from the playlist");
             System.out.println("3. Display the list of songs with play counts");
-            System.out.println("4. Quit");
+            System.out.println("4. Display songs with play count above 4");
+            System.out.println("5. Quit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -77,7 +78,7 @@ public class SongPlaylist1 {
                     System.out.println("Song added to the playlist.");
                     break;
                 case 2:
-                    System.out.print("Enter the index of the song to remove: ");
+                    System.out.print("Enter the song number of the song to remove: ");
                     int index = scanner.nextInt();
                     if (index >= 0 && index < playlist.size()) {
                         playlist.remove(index);
@@ -92,7 +93,15 @@ public class SongPlaylist1 {
                         System.out.println(song);
                     }
                     break;
-                case 4:
+                  case 4:
+                    System.out.println("Songs with play count above 4:");
+                    for (Song song : playlist) {
+                        if (song.getPlayCount() > 5) {
+                            System.out.println(song);
+                        }
+                    }
+                    break;   
+                case 5:
                     System.out.println("Goodbye!");
                     scanner.close();
                     System.exit(0);
