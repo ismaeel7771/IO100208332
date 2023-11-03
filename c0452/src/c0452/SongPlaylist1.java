@@ -81,7 +81,7 @@ public class SongPlaylist1 {
                     System.out.print("Enter the song number of the song to remove: ");
                     int index = scanner.nextInt();
                     if (index >= 0 && index < playlist.size()) {
-                        playlist.remove(index);
+                        playlist.remove(index-1);
                         System.out.println("Song removed from the playlist.");
                     } else {
                         System.out.println("Invalid index.");
