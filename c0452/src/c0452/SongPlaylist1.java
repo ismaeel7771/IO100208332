@@ -40,15 +40,34 @@ public class SongPlaylist1 {
         List<Song> playlist = new ArrayList<>();
 
         // Create an initial playlist with 10 songs and different play counts
+        //song 1
         playlist.add(new Song("Ehnna Sohna", "Arjit Singh", 5));
+       
+        //song 2
         playlist.add(new Song("295", "Sidhu", 8));
+        
+        //song 3
         playlist.add(new Song("lala", "Eminem", 12));
+       
+        //song 4
         playlist.add(new Song("Amplifier", "Imran Khan", 3));
+      
+        //song 5
         playlist.add(new Song("Shape of you", "ED Sheeran", 6));
+       
+        //song 6
         playlist.add(new Song("do you know", "Diljit Dosanjh", 10));
+       
+        //song 7
         playlist.add(new Song("kadi de hans bol", "Atif Aslam", 15));
+      
+        //song 8
         playlist.add(new Song("pathaan", "Salman Khan", 2));
+       
+        //song 9
         playlist.add(new Song("chamak challo", "Sharukh Khan", 7));
+       
+        //song 10
         playlist.add(new Song("yh", "Bob Marley", 4));
 
         Scanner scanner = new Scanner(System.in);
